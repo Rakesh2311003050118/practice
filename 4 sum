@@ -1,0 +1,15 @@
+class Solution:
+    def fourSum(self,nums,target):
+        result=[]
+        n=len(nums)
+        for a in range(n):
+            for b in range(a+1,n):
+                for c in range(b+1,n):
+                    for d in range(c+1,n):
+                        if nums[a]+nums[b]+nums[c]+nums[d]==target:
+                            o=sorted([nums[a],nums[b],nums[c],nums[d]])
+                            if o not in result:
+                                result.append(o)
+        return(result)
+
+        
